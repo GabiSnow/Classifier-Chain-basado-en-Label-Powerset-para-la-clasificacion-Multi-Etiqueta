@@ -25,6 +25,7 @@ buscando una mayor eficiencia en la clasificación. El número de clusters se de
 automáticamente, para formar N grupos de 3 miembros como máximo.
 
 _Entrenamiento del modelo_
+
 Una vez que se ha realizado el clustering, se procede a entrenar la cadena de
 clasificadores. Cada cluster de etiquetas se considera un problema de clasificación
 independiente, asi que para cada cluster se entrena un clasificador utilizando un
@@ -40,7 +41,8 @@ anteriores, siguiendo así el concepto principal de Classifier Chain. Esto permi
 siguiente clasificador en la cadena tenga en cuenta tanto las predicciones previas como
 las características originales para mejorar la precisión de la clasificación.
 
-Fase de predicción
+_Fase de predicción_
+
 Finalmente, cuando se desea hacer predicciones para un nuevo conjunto de datos, el
 algoritmo utiliza la cadena completa de clasificadores para generar predicciones multietiqueta. Cada clasificador en la cadena aborda un subconjunto específico de
 etiquetas, y las predicciones de todos los clasificadores se combinan para obtener la
